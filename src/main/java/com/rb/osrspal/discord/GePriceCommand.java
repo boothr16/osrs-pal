@@ -1,7 +1,11 @@
 package com.rb.osrspal.discord;
 
+import com.rb.osrspal.ge.GeService;
+import com.rb.osrspal.util.ItemNameNormalizer;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
+import org.springframework.stereotype.Component;
 
+@Component
 public class GePriceCommand {
     private final GeService geService;
 
@@ -10,7 +14,7 @@ public class GePriceCommand {
     }
 
     public void handle(SlashCommandInteractionEvent event) {
-        String item = event.getOption("item").getAsString();
+        String item = ItemNameNormalizer.normalize(event.getOption("item").getAsString());
         event.deferReply().queue();
 
         geService.lookup(item)
