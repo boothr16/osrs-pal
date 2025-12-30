@@ -1,0 +1,5 @@
+discord:
+  token: ${DISCORD_OSRSPAL_TOKEN}
+
+osrs:
+  base-url: https://secure.runescape.com
