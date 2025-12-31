@@ -1,5 +1,6 @@
 package com.rb.osrspal.ge;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -10,7 +11,7 @@ public class GeClient {
 
     private final WebClient webClient;
 
-    public GeClient(WebClient webClient) {
+    public GeClient(@Qualifier("osrsWebClient") WebClient webClient) {
         this.webClient = webClient;
     }
 

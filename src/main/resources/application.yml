@@ -3,6 +3,7 @@ discord:
 
 osrs:
   base-url: https://secure.runescape.com
+  ge-mapping-base-url: https://static.runelite.net/cache/item/names.json
 
 logging:
   level:

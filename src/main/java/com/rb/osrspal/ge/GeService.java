@@ -14,7 +14,7 @@ public class GeService {
     }
 
     public CompletableFuture<String> lookupPriceById(Integer itemId) {
-        return geClient.fetchPriceFromItemId(itemId)
+        return geClient.fetchPriceFromItemId(4151)
                 .thenApply(price -> "**" + price.name() + "**\nPrice: " + price.price() + " gp");
     }
 }
