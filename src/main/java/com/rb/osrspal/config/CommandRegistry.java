@@ -11,7 +11,7 @@ public class CommandRegistry {
     public CommandRegistry(JDA jda) {
         jda.updateCommands()
                 .addCommands(
-                        Commands.slash("price", "Lookup GE price")
+                        Commands.slash("ge", "Lookup GE price")
                                 .addOption(
                                         OptionType.STRING,
                                         "item",

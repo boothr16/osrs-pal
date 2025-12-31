@@ -15,7 +15,7 @@ public class CommandListener extends ListenerAdapter {
 
     @Override
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
-        if (event.getName().equals("price")) {
+        if (event.getName().equals("ge")) {
             geCommand.handle(event);
         }
     }
