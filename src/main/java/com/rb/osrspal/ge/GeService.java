@@ -13,8 +13,8 @@ public class GeService {
         this.geClient = geClient;
     }
 
-    public CompletableFuture<String> lookup(String itemName) {
-        return geClient.fetch(itemName)
+    public CompletableFuture<String> lookupPriceById(Integer itemId) {
+        return geClient.fetchPriceFromItemId(itemId)
                 .thenApply(price -> "**" + price.name() + "**\nPrice: " + price.price() + " gp");
     }
 }

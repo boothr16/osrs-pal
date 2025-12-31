@@ -14,8 +14,8 @@ public class GeClient {
         this.webClient = webClient;
     }
 
-    public CompletableFuture<GeItemPrice> fetch(String itemName) {
-        String url = "/m=itemdb_oldschool/api/catalogue/detail.json?item=" + itemName;
+    public CompletableFuture<GeItemPrice> fetchPriceFromItemId(Integer itemId) {
+        String url = "/m=itemdb_oldschool/api/catalogue/detail.json?item=" + itemId.toString();
         return webClient.get()
                 .uri(url)
                 .retrieve()

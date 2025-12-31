@@ -3,3 +3,7 @@ discord:
 
 osrs:
   base-url: https://secure.runescape.com
+
+logging:
+  level:
+    com.rb.osrspal: DEBUG

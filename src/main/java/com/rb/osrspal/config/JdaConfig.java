@@ -20,12 +20,10 @@ public class JdaConfig {
 
         JDABuilder builder = JDABuilder.createDefault(token);
 
-        // Register all listeners managed by Spring
         listeners.forEach(builder::addEventListeners);
 
         JDA jda = builder.build();
 
-        // Block once at startup until ready
         jda.awaitReady();
 
         return jda;
